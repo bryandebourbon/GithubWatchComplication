@@ -8,14 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C78E2B0BC79E00D1D503 /* motivationApp.swift */; };
-		2E64C7912B0BC79E00D1D503 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7902B0BC79E00D1D503 /* ContentView.swift */; };
 		2E64C7932B0BC7A000D1D503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7922B0BC7A000D1D503 /* Assets.xcassets */; };
 		2E64C7962B0BC7A000D1D503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7952B0BC7A000D1D503 /* Preview Assets.xcassets */; };
 		2E64C79C2B0BC7A000D1D503 /* motivation Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2E64C79B2B0BC7A000D1D503 /* motivation Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E64C7A12B0BC7A000D1D503 /* motivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7A02B0BC7A000D1D503 /* motivationApp.swift */; };
-		2E64C7A32B0BC7A000D1D503 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7A22B0BC7A000D1D503 /* ContentView.swift */; };
 		2E64C7A52B0BC7A100D1D503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7A42B0BC7A100D1D503 /* Assets.xcassets */; };
 		2E64C7A82B0BC7A100D1D503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7A72B0BC7A100D1D503 /* Preview Assets.xcassets */; };
+		2E64C7BB2B0BCB9800D1D503 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E64C7BA2B0BCB9800D1D503 /* WidgetKit.framework */; };
+		2E64C7BD2B0BCB9800D1D503 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E64C7BC2B0BCB9800D1D503 /* SwiftUI.framework */; };
+		2E64C7C02B0BCB9800D1D503 /* PixelWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7BF2B0BCB9800D1D503 /* PixelWidget.swift */; };
+		2E64C7C22B0BCB9800D1D503 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7C12B0BCB9800D1D503 /* AppIntent.swift */; };
+		2E64C7C42B0BCB9A00D1D503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7C32B0BCB9A00D1D503 /* Assets.xcassets */; };
+		2E64C7C82B0BCB9A00D1D503 /* PixelWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E64C7B82B0BCB9800D1D503 /* PixelWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */; };
+		2E64C7CF2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */; };
+		2E64C7D02B0BCE5200D1D503 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */; };
+		2E64C7D32B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */; };
+		2E64C7D42B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */; };
+		2E64C7D52B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */; };
+		2E64C7D72B0BEBC000D1D503 /* ContributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */; };
+		2E64C7D82B0BEBC000D1D503 /* ContributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */; };
+		2E64C7D92B0BEBC000D1D503 /* ContributionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */; };
+		2E64C7DB2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
+		2E64C7DC2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
+		2E64C7DD2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +41,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2E64C79A2B0BC7A000D1D503;
 			remoteInfo = "motivation Watch App";
+		};
+		2E64C7C62B0BCB9A00D1D503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E64C7832B0BC79D00D1D503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E64C7B72B0BCB9800D1D503;
+			remoteInfo = PixelWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,19 +63,42 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E64C7CC2B0BCB9A00D1D503 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2E64C7C82B0BCB9A00D1D503 /* PixelWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E64C78B2B0BC79E00D1D503 /* motivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motivation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E64C78E2B0BC79E00D1D503 /* motivationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motivationApp.swift; sourceTree = "<group>"; };
-		2E64C7902B0BC79E00D1D503 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E64C7922B0BC7A000D1D503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E64C7952B0BC7A000D1D503 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E64C79B2B0BC7A000D1D503 /* motivation Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "motivation Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E64C7A02B0BC7A000D1D503 /* motivationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motivationApp.swift; sourceTree = "<group>"; };
-		2E64C7A22B0BC7A000D1D503 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E64C7A42B0BC7A100D1D503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E64C7A72B0BC7A100D1D503 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E64C7B22B0BC82A00D1D503 /* motivation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = motivation.entitlements; sourceTree = "<group>"; };
+		2E64C7B32B0BC83900D1D503 /* motivation Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "motivation Watch App.entitlements"; sourceTree = "<group>"; };
+		2E64C7B82B0BCB9800D1D503 /* PixelWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PixelWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E64C7BA2B0BCB9800D1D503 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2E64C7BC2B0BCB9800D1D503 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2E64C7BF2B0BCB9800D1D503 /* PixelWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelWidget.swift; sourceTree = "<group>"; };
+		2E64C7C12B0BCB9800D1D503 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		2E64C7C32B0BCB9A00D1D503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E64C7C52B0BCB9A00D1D503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
+		2E64C7D12B0BD04200D1D503 /* PixelWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixelWidgetExtension.entitlements; sourceTree = "<group>"; };
+		2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionGraphView.swift; sourceTree = "<group>"; };
+		2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionModel.swift; sourceTree = "<group>"; };
+		2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +116,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E64C7B52B0BCB9800D1D503 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E64C7BD2B0BCB9800D1D503 /* SwiftUI.framework in Frameworks */,
+				2E64C7BB2B0BCB9800D1D503 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2E64C7822B0BC79D00D1D503 = {
 			isa = PBXGroup;
 			children = (
+				2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */,
+				2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */,
+				2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */,
+				2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */,
+				2E64C7D12B0BD04200D1D503 /* PixelWidgetExtension.entitlements */,
 				2E64C78D2B0BC79E00D1D503 /* motivation */,
 				2E64C79F2B0BC7A000D1D503 /* motivation Watch App */,
+				2E64C7BE2B0BCB9800D1D503 /* PixelWidget */,
+				2E64C7B92B0BCB9800D1D503 /* Frameworks */,
 				2E64C78C2B0BC79E00D1D503 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +149,7 @@
 			children = (
 				2E64C78B2B0BC79E00D1D503 /* motivation.app */,
 				2E64C79B2B0BC7A000D1D503 /* motivation Watch App.app */,
+				2E64C7B82B0BCB9800D1D503 /* PixelWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +157,8 @@
 		2E64C78D2B0BC79E00D1D503 /* motivation */ = {
 			isa = PBXGroup;
 			children = (
+				2E64C7B22B0BC82A00D1D503 /* motivation.entitlements */,
 				2E64C78E2B0BC79E00D1D503 /* motivationApp.swift */,
-				2E64C7902B0BC79E00D1D503 /* ContentView.swift */,
 				2E64C7922B0BC7A000D1D503 /* Assets.xcassets */,
 				2E64C7942B0BC7A000D1D503 /* Preview Content */,
 			);
@@ -113,8 +176,8 @@
 		2E64C79F2B0BC7A000D1D503 /* motivation Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				2E64C7B32B0BC83900D1D503 /* motivation Watch App.entitlements */,
 				2E64C7A02B0BC7A000D1D503 /* motivationApp.swift */,
-				2E64C7A22B0BC7A000D1D503 /* ContentView.swift */,
 				2E64C7A42B0BC7A100D1D503 /* Assets.xcassets */,
 				2E64C7A62B0BC7A100D1D503 /* Preview Content */,
 			);
@@ -127,6 +190,26 @@
 				2E64C7A72B0BC7A100D1D503 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E64C7B92B0BCB9800D1D503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E64C7BA2B0BCB9800D1D503 /* WidgetKit.framework */,
+				2E64C7BC2B0BCB9800D1D503 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E64C7BE2B0BCB9800D1D503 /* PixelWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2E64C7BF2B0BCB9800D1D503 /* PixelWidget.swift */,
+				2E64C7C12B0BCB9800D1D503 /* AppIntent.swift */,
+				2E64C7C32B0BCB9A00D1D503 /* Assets.xcassets */,
+				2E64C7C52B0BCB9A00D1D503 /* Info.plist */,
+			);
+			path = PixelWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,15 +241,34 @@
 				2E64C7972B0BC7A000D1D503 /* Sources */,
 				2E64C7982B0BC7A000D1D503 /* Frameworks */,
 				2E64C7992B0BC7A000D1D503 /* Resources */,
+				2E64C7CC2B0BCB9A00D1D503 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2E64C7C72B0BCB9A00D1D503 /* PBXTargetDependency */,
 			);
 			name = "motivation Watch App";
 			productName = "motivation Watch App";
 			productReference = 2E64C79B2B0BC7A000D1D503 /* motivation Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2E64C7B72B0BCB9800D1D503 /* PixelWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E64C7C92B0BCB9A00D1D503 /* Build configuration list for PBXNativeTarget "PixelWidgetExtension" */;
+			buildPhases = (
+				2E64C7B42B0BCB9800D1D503 /* Sources */,
+				2E64C7B52B0BCB9800D1D503 /* Frameworks */,
+				2E64C7B62B0BCB9800D1D503 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixelWidgetExtension;
+			productName = PixelWidgetExtension;
+			productReference = 2E64C7B82B0BCB9800D1D503 /* PixelWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -182,6 +284,9 @@
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					2E64C79A2B0BC7A000D1D503 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					2E64C7B72B0BCB9800D1D503 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -201,6 +306,7 @@
 			targets = (
 				2E64C78A2B0BC79E00D1D503 /* motivation */,
 				2E64C79A2B0BC7A000D1D503 /* motivation Watch App */,
+				2E64C7B72B0BCB9800D1D503 /* PixelWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +330,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E64C7B62B0BCB9800D1D503 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E64C7C42B0BCB9A00D1D503 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -231,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E64C7912B0BC79E00D1D503 /* ContentView.swift in Sources */,
+				2E64C7D32B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */,
+				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
+				2E64C7D72B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
+				2E64C7DB2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +357,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E64C7A32B0BC7A000D1D503 /* ContentView.swift in Sources */,
+				2E64C7CF2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
+				2E64C7D82B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
 				2E64C7A12B0BC7A000D1D503 /* motivationApp.swift in Sources */,
+				2E64C7D42B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
+				2E64C7DC2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E64C7B42B0BCB9800D1D503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E64C7C02B0BCB9800D1D503 /* PixelWidget.swift in Sources */,
+				2E64C7C22B0BCB9800D1D503 /* AppIntent.swift in Sources */,
+				2E64C7D92B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
+				2E64C7D02B0BCE5200D1D503 /* SharedUserDefaults.swift in Sources */,
+				2E64C7D52B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
+				2E64C7DD2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +385,11 @@
 			isa = PBXTargetDependency;
 			target = 2E64C79A2B0BC7A000D1D503 /* motivation Watch App */;
 			targetProxy = 2E64C79D2B0BC7A000D1D503 /* PBXContainerItemProxy */;
+		};
+		2E64C7C72B0BCB9A00D1D503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E64C7B72B0BCB9800D1D503 /* PixelWidgetExtension */;
+			targetProxy = 2E64C7C62B0BCB9A00D1D503 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -373,8 +511,10 @@
 		2E64C7AC2B0BC7A100D1D503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "motivation Watch App/motivation Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"motivation Watch App/Preview Content\"";
@@ -403,8 +543,10 @@
 		2E64C7AD2B0BC7A100D1D503 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "motivation Watch App/motivation Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"motivation Watch App/Preview Content\"";
@@ -437,6 +579,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = motivation/motivation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"motivation/Preview Content\"";
@@ -458,9 +601,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryandebourbon.motivation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,6 +616,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = motivation/motivation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"motivation/Preview Content\"";
@@ -491,10 +638,76 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryandebourbon.motivation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E64C7CA2B0BCB9A00D1D503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PixelWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZPMV36P9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PixelWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PixelWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryandebourbon.motivation.watchkitapp.PixelWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		2E64C7CB2B0BCB9A00D1D503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PixelWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VZPMV36P9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PixelWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PixelWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryandebourbon.motivation.watchkitapp.PixelWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -524,6 +737,15 @@
 			buildConfigurations = (
 				2E64C7B02B0BC7A100D1D503 /* Debug */,
 				2E64C7B12B0BC7A100D1D503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E64C7C92B0BCB9A00D1D503 /* Build configuration list for PBXNativeTarget "PixelWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E64C7CA2B0BCB9A00D1D503 /* Debug */,
+				2E64C7CB2B0BCB9A00D1D503 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
