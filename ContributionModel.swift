@@ -8,7 +8,7 @@ class ContributionsModel: ObservableObject {
   }
 
   private func loadContributions() {
-    let sharedDefaults = UserDefaults(suiteName: "group.com.bryandebourbon.contrib2")
+    let sharedDefaults = UserDefaults(suiteName: "group.com.bryandebourbon.shared")
     if let encodedData = sharedDefaults?.data(forKey: "githubContributions"),
       let contributionDays = try? JSONDecoder().decode([ContributionDay].self, from: encodedData)
     {
@@ -20,7 +20,7 @@ class ContributionsModel: ObservableObject {
 
   private func storeContributionsInUserDefaults(_ contributionDays: [ContributionDay]) {
     if let encodedData = try? JSONEncoder().encode(contributionDays) {
-      UserDefaults(suiteName: "group.com.bryandebourbon.contrib2")?.set(
+      UserDefaults(suiteName: "group.com.bryandebourbon.shared")?.set(
         encodedData, forKey: "githubContributions")
     }
   }

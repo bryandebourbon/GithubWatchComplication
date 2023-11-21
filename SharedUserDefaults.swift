@@ -3,14 +3,14 @@ import WidgetKit
 
 class SharedUserDefaults {
   static let shared = SharedUserDefaults()
-  private let userDefaults: UserDefaults?
+  let userDefaults: UserDefaults?
   static let fetcher = GitHubDataFetcher()
 
   init() {
     userDefaults = UserDefaults(suiteName: "group.com.bryandebourbon.shared")
   }
 
-  func addContributionDays() {
+  func addContributionDays(completion: @escaping () -> Void) {
     SharedUserDefaults.fetcher.fetchGitHubData(
       accessToken: ""
     ) { result in
@@ -30,7 +30,7 @@ class SharedUserDefaults {
           self.userDefaults?.set(encodedData, forKey: "sharedArray")
           WidgetCenter.shared.reloadAllTimelines()
         }
-
+        completion()
       case .failure(let error):
         print("Error fetching data: \(error)")
       }
