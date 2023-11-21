@@ -16,21 +16,29 @@ struct ContentView: View {
 
   func refreshSharedArray() {
     SharedUserDefaults.shared.addContributionDays {
-      let array = SharedUserDefaults.shared.getSharedArray()
-      self.sharedArray = array
+      DispatchQueue.main.async {
+        let array = SharedUserDefaults.shared.getSharedArray()
+        self.sharedArray = array
+        print(array)
+      }
     }
   }
 
   var body: some View {
     VStack {
 
-      ContributionGraphView(contributions: sharedArray)
+      ContributionGraphView(contributions: $sharedArray)
 
-      Button("Send Contribution Data") {
+      Button("Refresh ") {
+        refreshSharedArray()
+      }
+      Button("Send") {
         WatchConnectivityManager.shared.sendContributionDays(contributionDays: sharedArray)
       }
     }.onAppear {
       refreshSharedArray()
+    }.onChange(of: sharedArray){
+//      print("sharedArray updated: \(sharedArray)")
     }
   }
 }

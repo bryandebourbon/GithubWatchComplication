@@ -21,16 +21,12 @@ class SharedUserDefaults {
           .weeks
           .flatMap { $0.contributionDays }
 
-        // Fetch existing contribution days and append new ones
-        var contributionDayArray = self.getSharedArray()
-        contributionDayArray.append(contentsOf: newContributionDays)
-
         // Save the updated array
-        if let encodedData = try? JSONEncoder().encode(contributionDayArray) {
-          self.userDefaults?.set(encodedData, forKey: "sharedArray")
-          WidgetCenter.shared.reloadAllTimelines()
-        }
-        completion()
+          if let encodedData = try? JSONEncoder().encode(newContributionDays) {
+            self.userDefaults?.set(encodedData, forKey: "sharedArray")
+            WidgetCenter.shared.reloadAllTimelines()
+          }
+          completion()
       case .failure(let error):
         print("Error fetching data: \(error)")
       }

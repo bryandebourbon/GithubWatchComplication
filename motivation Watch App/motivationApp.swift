@@ -20,7 +20,7 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
-      ContributionGraphView(contributions: sharedArray)
+      ContributionGraphView(contributions: $sharedArray)
     }
     .onAppear {
       refreshSharedArray()

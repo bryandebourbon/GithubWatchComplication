@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct ContributionGraphView: View {
-  var contributions: [ContributionDay]
+  @Binding var contributions: [ContributionDay]
   private let blockSize: CGFloat = 8
   private let padding: CGFloat = 2
   private let numberOfRows: Int = 7
@@ -102,14 +102,13 @@ struct ContributionGraphView: View {
 
 }
 
-
 #if DEBUG
   struct ContributionGraphView_Previews: PreviewProvider {
     static var model = ContributionsModel()  // Make 'model' static
     static var contributions: [ContributionDay] = model.generateMockData()
 
     static var previews: some View {
-      ContributionGraphView(contributions: contributions)
+        ContributionGraphView(contributions: .constant(contributions))
         .previewLayout(.fixed(width: 200, height: 110))
     }
   }

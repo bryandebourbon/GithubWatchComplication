@@ -110,7 +110,7 @@ struct Week: Codable {
   let contributionDays: [ContributionDay]
 }
 
-struct ContributionDay: Codable {
-  let date: String
-  let contributionCount: Int
+struct ContributionDay: Codable, Equatable {
+    let date: String
+    let contributionCount: Int
 }
