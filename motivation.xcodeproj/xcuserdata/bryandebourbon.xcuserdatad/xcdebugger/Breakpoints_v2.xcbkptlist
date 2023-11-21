@@ -30,8 +30,8 @@
             filePath = "ContributionGraphView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "daysInCurrentWeekPassed()"
             landmarkType = "7">
          </BreakpointContent>

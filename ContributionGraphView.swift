@@ -9,8 +9,12 @@ struct ContributionGraphView: View {
   private let maxWidth: CGFloat = 200
 
   private func colorForContributionCount(_ count: Int,  date: String) -> Color {
-      let today = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none)
-      if date == today && count == 0 {
+      let today = Date()
+      let formatter = DateFormatter()
+      formatter.dateFormat = "yyyy-MM-dd"
+      let todayString = formatter.string(from: today)
+
+      if date == todayString && count == 0 {
           return Color.red
       }
     switch count {
