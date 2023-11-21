@@ -8,7 +8,11 @@ struct ContributionGraphView: View {
   private let numberOfRows: Int = 7
   private let maxWidth: CGFloat = 200
 
-  private func colorForContributionCount(_ count: Int) -> Color {
+  private func colorForContributionCount(_ count: Int,  date: String) -> Color {
+      let today = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none)
+      if date == today && count == 0 {
+          return Color.red
+      }
     switch count {
     case 0: return Color.gray.opacity(0.4)
     case 1...3: return Color.green.opacity(0.6)
@@ -71,7 +75,7 @@ struct ContributionGraphView: View {
 
             if shouldDisplaySquare(at: columnIndex, rowIndex: rowIndex) {
               Rectangle()
-                .fill(colorForContributionCount(contributionCount))
+                    .fill(colorForContributionCount(contributionCount, date: date))
                 .frame(width: blockSize, height: blockSize)
                 .cornerRadius(2)
             }
