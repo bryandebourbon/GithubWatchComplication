@@ -57,7 +57,7 @@ struct PixelWidgetEntryView: View {
 
   var body: some View {
     VStack {
-        CaloriesGraphView()
+        CalendarMonthView()
 //        ContributionGraphView(contributions: .constant(entry.sharedArray))
     }.containerBackground(for: .widget){
         Color.black

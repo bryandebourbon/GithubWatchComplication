@@ -16,6 +16,9 @@
 		2E58FE112B10602A000A521A /* HealthKitFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE062B103970000A521A /* HealthKitFetcher.swift */; };
 		2E58FE122B10602E000A521A /* SimpleContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */; };
 		2E58FE132B10602E000A521A /* SimpleContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */; };
+		2E58FE152B106F9E000A521A /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE142B106F9E000A521A /* CalendarMonthView.swift */; };
+		2E58FE162B106FF8000A521A /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE142B106F9E000A521A /* CalendarMonthView.swift */; };
+		2E58FE172B106FFB000A521A /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE142B106F9E000A521A /* CalendarMonthView.swift */; };
 		2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C78E2B0BC79E00D1D503 /* motivationApp.swift */; };
 		2E64C7932B0BC7A000D1D503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7922B0BC7A000D1D503 /* Assets.xcassets */; };
 		2E64C7962B0BC7A000D1D503 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E64C7952B0BC7A000D1D503 /* Preview Assets.xcassets */; };
@@ -90,6 +93,7 @@
 		2E58FE062B103970000A521A /* HealthKitFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFetcher.swift; sourceTree = "<group>"; };
 		2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CaloriesGraphView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleContributionView.swift; sourceTree = "<group>"; };
+		2E58FE142B106F9E000A521A /* CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthView.swift; sourceTree = "<group>"; };
 		2E64C78B2B0BC79E00D1D503 /* motivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motivation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E64C78E2B0BC79E00D1D503 /* motivationApp.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = motivationApp.swift; sourceTree = "<group>"; tabWidth = 2; };
 		2E64C7922B0BC7A000D1D503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,13 +153,14 @@
 			isa = PBXGroup;
 			children = (
 				2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */,
-				2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */,
+				2E58FE142B106F9E000A521A /* CalendarMonthView.swift */,
 				2E58FE062B103970000A521A /* HealthKitFetcher.swift */,
+				2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */,
+				2E64C7D12B0BD04200D1D503 /* PixelWidgetExtension.entitlements */,
 				2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */,
 				2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */,
 				2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */,
 				2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */,
-				2E64C7D12B0BD04200D1D503 /* PixelWidgetExtension.entitlements */,
 				2E64C78D2B0BC79E00D1D503 /* motivation */,
 				2E64C79F2B0BC7A000D1D503 /* motivation Watch App */,
 				2E64C7BE2B0BCB9800D1D503 /* PixelWidget */,
@@ -390,6 +395,7 @@
 				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E58FE0D2B1048B3000A521A /* SimpleContributionView.swift in Sources */,
 				2E64C7D72B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
+				2E58FE152B106F9E000A521A /* CalendarMonthView.swift in Sources */,
 				2E58FE0B2B1042D2000A521A /* CaloriesGraphView.swift in Sources */,
 				2E64C7DB2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
 			);
@@ -405,6 +411,7 @@
 				2E64C7D82B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
 				2E58FE122B10602E000A521A /* SimpleContributionView.swift in Sources */,
 				2E64C7A12B0BC7A000D1D503 /* motivationApp.swift in Sources */,
+				2E58FE162B106FF8000A521A /* CalendarMonthView.swift in Sources */,
 				2E64C7D42B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C7DC2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
 			);
@@ -423,6 +430,7 @@
 				2E64C7D52B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E58FE0F2B106020000A521A /* CaloriesGraphView.swift in Sources */,
 				2E64C7DD2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
+				2E58FE172B106FFB000A521A /* CalendarMonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,35 @@
 import SwiftUI
-import WidgetKit
 
 struct SimpleContributionGraphView<Content>: View where Content: View {
-  let content: [Content]
+  let originalContent: [Content]
+  let defaultView: Content
+  private let calendar = Calendar.current
+  private let currentDate = Date()  // You can replace this with the date of the month you want to display
+
   private let padding: CGFloat = 2
-  private let numberOfRows: Int = 6
-  private let numberOfColumns: Int = 7
+  private var numberOfRows: Int {
+    let daysInMonth = self.daysInMonth
+    let startingDayOfMonth = self.startingDayOfMonth
+    let totalDays = daysInMonth + startingDayOfMonth
+    return (totalDays + 6) / 7  // Calculate the number of rows dynamically
+  }
+  private var numberOfColumns: Int { return 7 }  // Always 7 columns for days of the week
+  private let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+
+  private var daysInMonth: Int {
+    let range = calendar.range(of: .day, in: .month, for: currentDate)!
+    return range.count
+  }
+
+  private var startingDayOfMonth: Int {
+    let components = calendar.dateComponents([.year, .month], from: currentDate)
+    let firstDayOfMonth = calendar.date(from: components)!
+    return calendar.component(.weekday, from: firstDayOfMonth) - 1  // Adjust for 0-based index
+  }
+
+  private var totalBlocks: Int {
+    return numberOfRows * numberOfColumns
+  }
 
   var body: some View {
     GeometryReader { geometry in
@@ -17,13 +41,28 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
         (totalHeight - padding * (CGFloat(numberOfRows) + 1)) / CGFloat(numberOfRows)
 
       VStack(alignment: .leading, spacing: padding) {
+        HStack(spacing: padding) {
+          ForEach(daysOfWeek, id: \.self) { day in
+            Text(day)
+              .font(.caption)
+              .frame(width: blockWidth, height: blockHeight)
+          }
+        }
+
         ForEach(0..<numberOfRows, id: \.self) { rowIndex in
           HStack(spacing: padding) {
             ForEach(0..<numberOfColumns, id: \.self) { columnIndex in
               let index = rowIndex * numberOfColumns + columnIndex
-              content[index]
-                .frame(width: blockWidth, height: blockHeight)
-                .cornerRadius(2)
+              if index >= startingDayOfMonth && index < startingDayOfMonth + daysInMonth {
+                let contentIndex = index - startingDayOfMonth
+                (contentIndex < originalContent.count ? originalContent[contentIndex] : defaultView)
+                  .frame(width: blockWidth, height: blockHeight)
+                  .cornerRadius(2)
+              } else {
+                Color.black
+                  .frame(width: blockWidth, height: blockHeight)
+                  .cornerRadius(2)
+              }
             }
           }
         }
@@ -34,9 +73,11 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
 }
 
 struct SimpleContributionGraphView_Previews: PreviewProvider {
-    static var previews: some View {
-        SimpleContributionGraphView(content: Array(repeating: Color.red, count: 28))
-            .frame(width: 200, height: 50)
-            .previewLayout(.sizeThatFits)
-    }
+  static var previews: some View {
+    SimpleContributionGraphView(
+      originalContent: Array(repeating: Color.red, count: 20), defaultView: Color.gray
+    )
+    .frame(width: 200, height: 110)
+    .previewLayout(.sizeThatFits)
+  }
 }

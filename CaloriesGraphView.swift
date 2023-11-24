@@ -4,41 +4,40 @@ import SwiftUI
 struct CaloriesGraphView: View {
   @Binding var caloricContributions: [(caloriesBurned: Double, caloriesConsumed: Double)]
   var healthKitFetcher = HealthKitFetcher()
-  // Default initializer
+
   init(caloricContributions: Binding<[(caloriesBurned: Double, caloriesConsumed: Double)]>) {
-    self._caloricContributions = caloricContributions
+      self._caloricContributions = caloricContributions
   }
 
-  // Initializer with sample data
   init() {
-    let sampleData = (0..<28).map { _ in
-      (
-        caloriesBurned: Double.random(in: 1000...9000),
-        caloriesConsumed: Double.random(in: 1000...9000)
-      )
-    }
-    self._caloricContributions = .constant(sampleData)
+      let sampleData = (0..<28).map { _ in
+          (caloriesBurned: Double.random(in: 1000...9000), caloriesConsumed: Double.random(in: 1000...9000))
+      }
+      self._caloricContributions = .constant(sampleData)
   }
+
   var body: some View {
-    VStack {
-      if !caloricContributions.isEmpty {
-        SimpleContributionGraphView(
-          content: caloricContributions.enumerated().map { (index, data) in
-            HealthDataView(data: data, isToday: index == caloricContributions.count - 1)
+      VStack {
+          if !caloricContributions.isEmpty {
+              SimpleContributionGraphView(
+                  originalContent: caloricContributions.enumerated().map { (index, data) in
+                      HealthDataView(data: data, isToday: index == caloricContributions.count - 1)
+                  }, defaultView: HealthDataView(data: (0, 0), isToday: false)
+              )
+          } else {
+              Text("No data available. Please tap 'Update'.")
           }
-        )
-      } else {
-        Text("No data available. Please tap 'Update'.")
       }
-    }
-    .onAppear {
-      healthKitFetcher.update()
-      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        self.caloricContributions = healthKitFetcher.dailyData
+      .onAppear {
+          healthKitFetcher.update()
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+              self.caloricContributions = healthKitFetcher.dailyData
+          }
       }
-    }
   }
 }
+
+
 
 // Other structs remain the same...
 
@@ -59,7 +58,7 @@ struct HealthDataView: View {
   }
 
   var body: some View {
-    let dominantColor: Color = data.caloriesBurned > data.caloriesConsumed ? .green : .gray
+    let dominantColor: Color = data.caloriesBurned > data.caloriesConsumed ? .green : Color.gray.opacity(0.4)
 
     let gradient = Gradient(stops: [
       .init(color: .green, location: 0),
