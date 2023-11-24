@@ -27,19 +27,24 @@ struct ContentView: View {
   var body: some View {
     VStack {
 
-      CaloriesGraphView()
+      Spacer()
       ContributionGraphView(contributions: $sharedArray)
+      Spacer()
+      CaloriesGraphView()
+        .frame(width: 300, height: 60)
 
+      Spacer()
       Button("Refresh ") {
         refreshSharedArray()
       }
       Button("Send") {
         WatchConnectivityManager.shared.sendContributionDays(contributionDays: sharedArray)
       }
+      Spacer()
     }.onAppear {
       refreshSharedArray()
-    }.onChange(of: sharedArray){
-//      print("sharedArray updated: \(sharedArray)")
+    }.onChange(of: sharedArray) {
+      //      print("sharedArray updated: \(sharedArray)")
     }
   }
 }
