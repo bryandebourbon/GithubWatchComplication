@@ -20,7 +20,8 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
-      ContributionGraphView(contributions: $sharedArray)
+        CaloriesGraphView()
+//      ContributionGraphView(contributions: $sharedArray)
     }
     .onAppear {
       refreshSharedArray()
@@ -76,4 +77,8 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     error: Error?
   ) {}
 
+}
+
+#Preview {
+    ContentView()
 }

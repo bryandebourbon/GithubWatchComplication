@@ -27,6 +27,7 @@ struct ContentView: View {
   var body: some View {
     VStack {
 
+      CaloriesGraphView()
       ContributionGraphView(contributions: $sharedArray)
 
       Button("Refresh ") {
@@ -82,4 +83,8 @@ class WatchConnectivityManager: NSObject, WCSessionDelegate {
   func sessionDidBecomeInactive(_ session: WCSession) {}
 
   func sessionDidDeactivate(_ session: WCSession) {}
+}
+
+#Preview{
+  ContentView()
 }
