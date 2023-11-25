@@ -1,8 +1,10 @@
 import HealthKit
 import SwiftUI
 
-struct InfiniteGraphView: View {
-  @Binding var caloricContributions: [(caloriesBurned: Double, caloriesConsumed: Double)]
+struct MonthGraphView: View {
+  var monthData: MonthData
+  var monthName: String  // Accept monthName as a parameter
+
   var healthKitFetcher = HealthKitFetcher()
 
   private let gridCalculator = GridCalculator(currentDate: Date())
@@ -16,7 +18,10 @@ struct InfiniteGraphView: View {
       let blockHeight = gridCalculator.calculateBlockHeight(
         containerHeight: geometry.size.height, padding: padding)
 
-      VStack(alignment: .leading, spacing: padding) {
+      VStack(
+        alignment: .leading,
+        spacing: padding
+      ) {
         DayHeadersView(
           daysOfWeek: gridCalculator.daysOfWeek,
           blockWidth: blockWidth,
@@ -29,36 +34,29 @@ struct InfiniteGraphView: View {
           numberOfColumns: gridCalculator.numberOfColumns,
           startingDayOfMonth: gridCalculator.startingDayOfMonth,
           daysInMonth: gridCalculator.daysInMonth,
-          caloricContributions: $caloricContributions,
+          caloricContributions: .constant(
+            monthData.dailyData.map { ($0.caloriesBurned, $0.caloriesConsumed) }),
           blockWidth: blockWidth,
           blockHeight: blockHeight,
           monthLabelWidth: monthLabelWidth,
-          monthName: gridCalculator.monthName,
+          monthName: monthName,  // Use the passed monthName parameter here
           padding: padding
         )
       }
       .padding(.all, padding)
     }
-    .onAppear {
-      fetchHealthData()
-    }
-  }
-
-  private func fetchHealthData() {
-    healthKitFetcher.update()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-      self.caloricContributions = healthKitFetcher.dailyData
-    }
   }
 }
-
-// Define GridCalculator, DayHeadersView, MonthGridView, MonthLabelView, BlockView, DataView...
-
-// EnhancedContributionGraphView Preview
-struct EnhancedContributionGraphView_Previews: PreviewProvider {
+struct MonthGraphView_Previews: PreviewProvider {
   static var previews: some View {
-      InfiniteGraphView(caloricContributions: .constant([]))
-      .frame(width: 250, height: 100)
-      .previewLayout(.sizeThatFits)
+    MonthGraphView(
+      monthData: MonthData(
+        month: Date(),
+        dailyData: [
+          DayData(day: Date(), caloriesBurned: 300, caloriesConsumed: 2500)
+          // Add more DayData as needed
+        ]), monthName: "Jan"
+        // Add more MonthData as needed
+    )
   }
 }

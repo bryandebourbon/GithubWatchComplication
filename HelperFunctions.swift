@@ -1,4 +1,5 @@
 import Foundation
+
 struct GridCalculator {
     private let calendar = Calendar.current
     let currentDate: Date

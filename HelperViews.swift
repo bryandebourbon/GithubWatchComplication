@@ -98,7 +98,8 @@ struct MonthGridView: View {
           BlockView(
             rowIndex: rowIndex, columnIndex: columnIndex, numberOfColumns: numberOfColumns,
             startingDayOfMonth: startingDayOfMonth, daysInMonth: daysInMonth,
-            caloricContributions: $caloricContributions, blockWidth: blockWidth,
+            caloricContributions: $caloricContributions,
+            blockWidth: blockWidth,
             blockHeight: blockHeight)
         }
       }
