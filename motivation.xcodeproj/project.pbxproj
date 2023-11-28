@@ -57,6 +57,7 @@
 		2E7CAA9F2B117104006CDABC /* InfiniteGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */; };
 		2E7CAAA02B117104006CDABC /* InfiniteGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */; };
 		2E7CAAA12B117104006CDABC /* InfiniteGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */; };
+		2EFCEC312B15492700614BF9 /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCEC302B15492700614BF9 /* CalendarGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		2E7CAA962B115D8F006CDABC /* HelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViews.swift; sourceTree = "<group>"; };
 		2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteGraphView.swift; sourceTree = "<group>"; };
+		2EFCEC302B15492700614BF9 /* CalendarGridView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		2E64C7822B0BC79D00D1D503 = {
 			isa = PBXGroup;
 			children = (
+				2EFCEC302B15492700614BF9 /* CalendarGridView.swift */,
 				2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */,
 				2E7CAA962B115D8F006CDABC /* HelperViews.swift */,
 				2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */,
@@ -413,6 +416,7 @@
 				2E58FE072B103970000A521A /* HealthKitFetcher.swift in Sources */,
 				2E64C7D32B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */,
+				2EFCEC312B15492700614BF9 /* CalendarGridView.swift in Sources */,
 				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E270B102B11560800BE2DE4 /* MonthGraphView.swift in Sources */,
 				2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */,

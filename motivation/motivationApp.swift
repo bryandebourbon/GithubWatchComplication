@@ -26,25 +26,31 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
+      
+      
+      
+//      CalendarGridView()
+      
+      
 
-      Spacer()
-      ContributionGraphView(contributions: $sharedArray)
-      Spacer()
-      CaloriesGraphView()
-        .frame(width: 300, height: 60)
-
-      Spacer()
-      Button("Refresh ") {
-        refreshSharedArray()
-      }
-      Button("Send") {
-        WatchConnectivityManager.shared.sendContributionDays(contributionDays: sharedArray)
-      }
-      Spacer()
-    }.onAppear {
-      refreshSharedArray()
-    }.onChange(of: sharedArray) {
-      //      print("sharedArray updated: \(sharedArray)")
+//      Spacer()
+//      ContributionGraphView(contributions: $sharedArray)
+//      Spacer()
+//      CaloriesGraphView()
+//        .frame(width: 300, height: 60)
+//
+//      Spacer()
+//      Button("Refresh ") {
+//        refreshSharedArray()
+//      }
+//      Button("Send") {
+//        WatchConnectivityManager.shared.sendContributionDays(contributionDays: sharedArray)
+//      }
+//      Spacer()
+//    }.onAppear {
+//      refreshSharedArray()
+//    }.onChange(of: sharedArray) {
+//      //      print("sharedArray updated: \(sharedArray)")
     }
   }
 }
@@ -90,6 +96,6 @@ class WatchConnectivityManager: NSObject, WCSessionDelegate {
   func sessionDidDeactivate(_ session: WCSession) {}
 }
 
-#Preview{
-  ContentView()
-}
+//#Preview{
+//  ContentView()
+//}

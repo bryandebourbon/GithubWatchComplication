@@ -32,8 +32,8 @@
 				<key>focused</key>
 				<string></string>
 				<key>leading</key>
-				<string>  }
-}
+				<string>//  }
+//}
 </string>
 				<key>trailing</key>
 				<string></string>
@@ -71,16 +71,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
+				<string>//
 </string>
 				<key>leading</key>
-				<string>}
-
+				<string>//}
+//
 </string>
 				<key>trailing</key>
-				<string>// Other structs remain the same...
-
-struct CalendarMonthView_Previews: PreviewProvider {
+				<string>//// Other structs remain the same...
+//
+//struct CalendarMonthView_Previews: PreviewProvider {
 </string>
 			</dict>
 			<key>type</key>
