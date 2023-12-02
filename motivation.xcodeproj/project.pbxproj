@@ -121,7 +121,7 @@
 		2E64C7C12B0BCB9800D1D503 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		2E64C7C32B0BCB9A00D1D503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E64C7C52B0BCB9A00D1D503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
+		2E64C7CD2B0BCDB700D1D503 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; tabWidth = 2; };
 		2E64C7D12B0BD04200D1D503 /* PixelWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixelWidgetExtension.entitlements; sourceTree = "<group>"; };
 		2E64C7D22B0BEB5300D1D503 /* ContributionGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionGraphView.swift; sourceTree = "<group>"; };
 		2E64C7D62B0BEBC000D1D503 /* ContributionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionModel.swift; sourceTree = "<group>"; };
