@@ -3,4 +3,54 @@
    uuid = "F7690D07-533F-469A-AFAE-0C1BC56791CE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7083CD03-A12F-4355-A6D8-7D22BA6710D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedUserDefaults.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getSharedArray()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7083CD03-A12F-4355-A6D8-7D22BA6710D1 - 993e72e97a93fe16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "motivation.SharedUserDefaults.getSharedArray() -&gt; Swift.Array&lt;motivation.ContributionDay&gt;"
+                  moduleName = "motivation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryandebourbon/Desktop/motivation/SharedUserDefaults.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "7083CD03-A12F-4355-A6D8-7D22BA6710D1 - 5272541d57b0cd99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "motivation_Watch_App.SharedUserDefaults.getSharedArray() -&gt; Swift.Array&lt;motivation_Watch_App.ContributionDay&gt;"
+                  moduleName = "motivation Watch App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryandebourbon/Desktop/motivation/SharedUserDefaults.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
