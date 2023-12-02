@@ -22,6 +22,9 @@ struct ContentView: View {
     VStack {
 //        CaloriesGraphView()
       ContributionGraphView(contributions: $sharedArray)
+        Button("Refresh ") {
+          refreshSharedArray()
+        }
     }
     .onAppear {
       refreshSharedArray()
@@ -33,10 +36,15 @@ struct ContentView: View {
     }
   }
 
-  func refreshSharedArray() {
-    self.sharedArray = SharedUserDefaults.shared.getSharedArray()
-    WidgetCenter.shared.reloadAllTimelines()
-  }
+    func refreshSharedArray() {
+        SharedUserDefaults.shared.addContributionDays {
+            DispatchQueue.main.async {
+                let array = SharedUserDefaults.shared.getSharedArray()
+                self.sharedArray = array
+                print(array)
+            }
+        }
+    }
 }
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
