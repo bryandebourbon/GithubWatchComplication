@@ -12,7 +12,7 @@ class SharedUserDefaults {
 
   func addContributionDays(completion: @escaping () -> Void) {
     SharedUserDefaults.fetcher.fetchGitHubData(
-      accessToken: ""
+      accessToken: "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"
     ) { result in
       switch result {
       case .success(let response):

@@ -41,12 +41,12 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
         (totalHeight - padding * (CGFloat(numberOfRows) + 1)) / CGFloat(numberOfRows)
 
       VStack(alignment: .leading, spacing: padding) {
-        HStack(spacing: padding) {
-          ForEach(daysOfWeek, id: \.self) { day in
-            Text(day)
-              .font(.caption)
-              .frame(width: blockWidth, height: blockHeight)
-          }
+        HStack(alignment: .center) {
+//          Text("5pm FRXMAS").font(.system(size: 10))
+//                    ForEach(daysOfWeek, id: \.self) { day in
+//                      Text(day)
+//                        .font(.caption)
+//                        .frame(width: blockWidth, height: blockHeight)
         }
 
         ForEach(0..<numberOfRows, id: \.self) { rowIndex in

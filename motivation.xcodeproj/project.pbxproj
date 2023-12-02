@@ -54,10 +54,6 @@
 		2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
 		2E7CAA9C2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
 		2E7CAA9D2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
-		2E7CAA9F2B117104006CDABC /* InfiniteGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */; };
-		2E7CAAA02B117104006CDABC /* InfiniteGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */; };
-		2E7CAAA12B117104006CDABC /* InfiniteGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */; };
-		2EFCEC312B15492700614BF9 /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCEC302B15492700614BF9 /* CalendarGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,8 +131,6 @@
 		2E64C8052B0C409100D1D503 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		2E7CAA962B115D8F006CDABC /* HelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViews.swift; sourceTree = "<group>"; };
 		2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
-		2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteGraphView.swift; sourceTree = "<group>"; };
-		2EFCEC302B15492700614BF9 /* CalendarGridView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +164,6 @@
 		2E64C7822B0BC79D00D1D503 = {
 			isa = PBXGroup;
 			children = (
-				2EFCEC302B15492700614BF9 /* CalendarGridView.swift */,
-				2E7CAA9E2B117104006CDABC /* InfiniteGraphView.swift */,
 				2E7CAA962B115D8F006CDABC /* HelperViews.swift */,
 				2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */,
 				2E270B0F2B11560800BE2DE4 /* MonthGraphView.swift */,
@@ -412,11 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7CAA9F2B117104006CDABC /* InfiniteGraphView.swift in Sources */,
 				2E58FE072B103970000A521A /* HealthKitFetcher.swift in Sources */,
 				2E64C7D32B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */,
-				2EFCEC312B15492700614BF9 /* CalendarGridView.swift in Sources */,
 				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E270B102B11560800BE2DE4 /* MonthGraphView.swift in Sources */,
 				2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
@@ -433,7 +423,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7CAAA02B117104006CDABC /* InfiniteGraphView.swift in Sources */,
 				2E64C7CF2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E58FE102B10602A000A521A /* HealthKitFetcher.swift in Sources */,
 				2E58FE0E2B10601F000A521A /* CaloriesGraphView.swift in Sources */,
@@ -456,7 +445,6 @@
 				2E58FE112B10602A000A521A /* HealthKitFetcher.swift in Sources */,
 				2E64C7C02B0BCB9800D1D503 /* PixelWidget.swift in Sources */,
 				2E64C7C22B0BCB9800D1D503 /* AppIntent.swift in Sources */,
-				2E7CAAA12B117104006CDABC /* InfiniteGraphView.swift in Sources */,
 				2E64C7D92B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
 				2E64C7D02B0BCE5200D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E58FE132B10602E000A521A /* SimpleContributionView.swift in Sources */,

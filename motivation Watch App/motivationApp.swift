@@ -20,8 +20,8 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
-        CaloriesGraphView()
-//      ContributionGraphView(contributions: $sharedArray)
+//        CaloriesGraphView()
+      ContributionGraphView(contributions: $sharedArray)
     }
     .onAppear {
       refreshSharedArray()
