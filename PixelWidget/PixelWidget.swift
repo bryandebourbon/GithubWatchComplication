@@ -58,9 +58,9 @@ struct PixelWidgetEntryView: View {
   var body: some View {
     VStack {
         GitHubMonthView(contributions: .constant(entry.sharedArray))
-    }.containerBackground(for: .widget){
+    }.containerBackground(for:.widget){
         Color.black
-    }
+    }.frame(width: 194, height: 76)
   }
 }
 @main

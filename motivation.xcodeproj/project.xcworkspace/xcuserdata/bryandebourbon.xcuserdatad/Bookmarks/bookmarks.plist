@@ -9,53 +9,16 @@
 			<dict>
 				<key>location-parameters</key>
 				<dict>
-					<key>EndingLineNumber</key>
-					<string>110</string>
-					<key>StartingLineNumber</key>
-					<string>110</string>
-					<key>Timestamp</key>
-					<string>722553505.349547</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>CalendarMonthView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string></string>
-				<key>leading</key>
-				<string>  }
-}
-</string>
-				<key>trailing</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
 					<key>EndingColumnNumber</key>
-					<string>0</string>
+					<string>60</string>
 					<key>EndingLineNumber</key>
-					<string>110</string>
+					<string>14</string>
 					<key>StartingColumnNumber</key>
-					<string>0</string>
+					<string>20</string>
 					<key>StartingLineNumber</key>
-					<string>110</string>
+					<string>14</string>
 					<key>Timestamp</key>
-					<string>725596134.58099</string>
+					<string>725641234.2084</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -64,20 +27,23 @@
 					<key>payload</key>
 					<dict>
 						<key>relative-path</key>
-						<string>CalendarMonthView.swift</string>
+						<string>SharedUserDefaults.swift</string>
 					</dict>
 				</dict>
 			</dict>
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string></string>
+				<string>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</string>
 				<key>leading</key>
-				<string>  }
-}
-</string>
+				<string>  func addContributionDays(completion: @escaping () -&gt; Void) {
+    SharedUserDefaults.fetcher.fetchGitHubData(
+      accessToken: "</string>
 				<key>trailing</key>
-				<string></string>
+				<string>"
+    ) { result in
+      switch result {
+</string>
 			</dict>
 			<key>type</key>
 			<string>bookmark</string>
