@@ -113,7 +113,7 @@ struct ContributionGraphView: View {
 #if DEBUG
   struct ContributionGraphView_Previews: PreviewProvider {
     static var model = ContributionsModel()  // Make 'model' static
-    static var contributions: [ContributionDay] = model.generateMockData()
+    static var contributions: [ContributionDay] = model.generateMockDataYear()
 
     static var previews: some View {
         ContributionGraphView(contributions: .constant(contributions))

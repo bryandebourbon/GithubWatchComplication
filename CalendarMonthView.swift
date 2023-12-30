@@ -14,7 +14,7 @@ struct CalendarMonthView: View {
     let currentDate = Date()
 
     // Get the current day of the month
-      let dayOfMonth = calendar.component(.day, from: currentDate)
+    let dayOfMonth = calendar.component(.day, from: currentDate)
 
     // Generate sample data up to the current day of the month
     let sampleData = (0..<dayOfMonth).map { _ in
@@ -75,10 +75,11 @@ struct DataView: View {
   }
 
   var body: some View {
-    var dominantColor = data.caloriesBurned > data.caloriesConsumed ? Color.green : Color.red.opacity(0.4)
-      if isInFuture {
-          dominantColor = Color.gray.opacity(0.4)
-      }
+    var dominantColor =
+      data.caloriesBurned > data.caloriesConsumed ? Color.green : Color.red.opacity(0.4)
+    if isInFuture {
+      dominantColor = Color.gray.opacity(0.4)
+    }
 
     let gradient = Gradient(stops: [
       .init(color: .green, location: 0),
@@ -98,7 +99,6 @@ struct DataView: View {
     .cornerRadius(4)
   }
 }
-
 
 // Other structs remain the same...
 

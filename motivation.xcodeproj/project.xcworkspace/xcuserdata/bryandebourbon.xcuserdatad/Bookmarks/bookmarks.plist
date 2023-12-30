@@ -49,13 +49,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>102</string>
+					<string>110</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>101</string>
+					<string>110</string>
 					<key>Timestamp</key>
-					<string>722532142.115724</string>
+					<string>725596134.58099</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -71,17 +71,13 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
-</string>
+				<string></string>
 				<key>leading</key>
-				<string>}
-
+				<string>  }
+}
 </string>
 				<key>trailing</key>
-				<string>// Other structs remain the same...
-
-struct CalendarMonthView_Previews: PreviewProvider {
-</string>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>bookmark</string>

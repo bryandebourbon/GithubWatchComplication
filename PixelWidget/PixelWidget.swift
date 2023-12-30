@@ -57,7 +57,7 @@ struct PixelWidgetEntryView: View {
 
   var body: some View {
     VStack {
-        ContributionGraphView(contributions: .constant(entry.sharedArray))
+        GitHubMonthView(contributions: .constant(entry.sharedArray))
     }.containerBackground(for: .widget){
         Color.black
     }
@@ -90,7 +90,7 @@ extension ConfigurationAppIntent {
 }
 
 var model = ContributionsModel()  // Make 'model' static
-var sampleData: [ContributionDay] = model.generateMockData()
+var sampleData: [ContributionDay] = model.generateMockDataMonth()
 
 struct PixelWidget_Previews: PreviewProvider {
     

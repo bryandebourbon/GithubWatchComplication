@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E270B102B11560800BE2DE4 /* MonthGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E270B0F2B11560800BE2DE4 /* MonthGraphView.swift */; };
-		2E270B112B11560800BE2DE4 /* MonthGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E270B0F2B11560800BE2DE4 /* MonthGraphView.swift */; };
-		2E270B122B11560800BE2DE4 /* MonthGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E270B0F2B11560800BE2DE4 /* MonthGraphView.swift */; };
 		2E58FE072B103970000A521A /* HealthKitFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE062B103970000A521A /* HealthKitFetcher.swift */; };
 		2E58FE0B2B1042D2000A521A /* CaloriesGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */; };
 		2E58FE0D2B1048B3000A521A /* SimpleContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */; };
@@ -48,12 +45,16 @@
 		2E64C7DC2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
 		2E64C7DD2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
 		2E64C8072B0C409500D1D503 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E64C8052B0C409100D1D503 /* WatchConnectivity.framework */; };
-		2E7CAA972B115D8F006CDABC /* HelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA962B115D8F006CDABC /* HelperViews.swift */; };
-		2E7CAA982B115D8F006CDABC /* HelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA962B115D8F006CDABC /* HelperViews.swift */; };
-		2E7CAA992B115D8F006CDABC /* HelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA962B115D8F006CDABC /* HelperViews.swift */; };
 		2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
 		2E7CAA9C2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
 		2E7CAA9D2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
+		2EE772972B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */; };
+		2EE772982B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */; };
+		2EE772992B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */; };
+		2EE7729B2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */; };
+		2EE7729C2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */; };
+		2EE7729D2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */; };
+		2EE7729F2B3FD5D700D3F72D /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE7729E2B3FD5D700D3F72D /* WatchConnectivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +100,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E270B0F2B11560800BE2DE4 /* MonthGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthGraphView.swift; sourceTree = "<group>"; };
 		2E58FE062B103970000A521A /* HealthKitFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFetcher.swift; sourceTree = "<group>"; };
 		2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CaloriesGraphView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleContributionView.swift; sourceTree = "<group>"; };
@@ -129,8 +129,10 @@
 		2E64C7E82B0C2F8A00D1D503 /* Motivation_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivation_Watch_AppTests.swift; sourceTree = "<group>"; };
 		2E64C7FA2B0C31F000D1D503 /* motivationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motivationTests.swift; sourceTree = "<group>"; };
 		2E64C8052B0C409100D1D503 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
-		2E7CAA962B115D8F006CDABC /* HelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViews.swift; sourceTree = "<group>"; };
 		2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarContributionGraphView.swift; sourceTree = "<group>"; };
+		2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubMonthView.swift; sourceTree = "<group>"; };
+		2EE7729E2B3FD5D700D3F72D /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,9 +166,10 @@
 		2E64C7822B0BC79D00D1D503 = {
 			isa = PBXGroup;
 			children = (
-				2E7CAA962B115D8F006CDABC /* HelperViews.swift */,
+				2EE7729E2B3FD5D700D3F72D /* WatchConnectivityManager.swift */,
+				2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */,
 				2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */,
-				2E270B0F2B11560800BE2DE4 /* MonthGraphView.swift */,
+				2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */,
 				2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */,
 				2E58FE142B106F9E000A521A /* CalendarMonthView.swift */,
 				2E58FE062B103970000A521A /* HealthKitFetcher.swift */,
@@ -404,15 +407,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE772972B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */,
 				2E58FE072B103970000A521A /* HealthKitFetcher.swift in Sources */,
 				2E64C7D32B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */,
 				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
-				2E270B102B11560800BE2DE4 /* MonthGraphView.swift in Sources */,
 				2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
+				2EE7729F2B3FD5D700D3F72D /* WatchConnectivityManager.swift in Sources */,
 				2E58FE0D2B1048B3000A521A /* SimpleContributionView.swift in Sources */,
 				2E64C7D72B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
-				2E7CAA972B115D8F006CDABC /* HelperViews.swift in Sources */,
+				2EE7729B2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */,
 				2E58FE152B106F9E000A521A /* CalendarMonthView.swift in Sources */,
 				2E58FE0B2B1042D2000A521A /* CaloriesGraphView.swift in Sources */,
 				2E64C7DB2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
@@ -423,15 +427,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE772982B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */,
 				2E64C7CF2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E58FE102B10602A000A521A /* HealthKitFetcher.swift in Sources */,
 				2E58FE0E2B10601F000A521A /* CaloriesGraphView.swift in Sources */,
 				2E64C7D82B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
-				2E270B112B11560800BE2DE4 /* MonthGraphView.swift in Sources */,
 				2E7CAA9C2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
 				2E58FE122B10602E000A521A /* SimpleContributionView.swift in Sources */,
 				2E64C7A12B0BC7A000D1D503 /* motivationApp.swift in Sources */,
-				2E7CAA982B115D8F006CDABC /* HelperViews.swift in Sources */,
+				2EE7729C2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */,
 				2E58FE162B106FF8000A521A /* CalendarMonthView.swift in Sources */,
 				2E64C7D42B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C7DC2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
@@ -447,11 +451,11 @@
 				2E64C7C22B0BCB9800D1D503 /* AppIntent.swift in Sources */,
 				2E64C7D92B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
 				2E64C7D02B0BCE5200D1D503 /* SharedUserDefaults.swift in Sources */,
+				2EE772992B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */,
 				2E58FE132B10602E000A521A /* SimpleContributionView.swift in Sources */,
-				2E7CAA992B115D8F006CDABC /* HelperViews.swift in Sources */,
 				2E7CAA9D2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
+				2EE7729D2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */,
 				2E64C7D52B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
-				2E270B122B11560800BE2DE4 /* MonthGraphView.swift in Sources */,
 				2E58FE0F2B106020000A521A /* CaloriesGraphView.swift in Sources */,
 				2E64C7DD2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */,
 				2E58FE172B106FFB000A521A /* CalendarMonthView.swift in Sources */,

@@ -1,7 +1,5 @@
-// WatchOS Part: motivation_Watch_AppApp.swift
 import SwiftUI
 import WatchConnectivity
-import WidgetKit
 
 @main
 struct motivation_Watch_AppApp: App {
@@ -17,35 +15,35 @@ struct motivation_Watch_AppApp: App {
 
 struct ContentView: View {
   @State private var sharedArray: [ContributionDay] = []
+  let didUpdateSharedArray = NotificationCenter.default.publisher(for: NSNotification.Name("UpdatedSharedArray"))
 
   var body: some View {
     VStack {
-//        CaloriesGraphView()
-      ContributionGraphView(contributions: $sharedArray)
-        Button("Refresh ") {
-          refreshSharedArray()
-        }
-    }
-    .onAppear {
-      refreshSharedArray()
-      NotificationCenter.default.addObserver(
-        forName: NSNotification.Name("UpdatedSharedArray"), object: nil, queue: nil
-      ) { _ in
+      GitHubMonthView(contributions: $sharedArray)
+      Button("Refresh") {
         refreshSharedArray()
       }
     }
+    .onAppear {
+      refreshSharedArray()
+    }
+    .onReceive(didUpdateSharedArray) { _ in
+      updateSharedArray()
+    }
   }
 
-    func refreshSharedArray() {
-        SharedUserDefaults.shared.addContributionDays {
-            DispatchQueue.main.async {
-                let array = SharedUserDefaults.shared.getSharedArray()
-                self.sharedArray = array
-                print(array)
-            }
-        }
+  func updateSharedArray() {
+    if let data = SharedUserDefaults.shared.userDefaults?.data(forKey: "sharedArray"),
+       let contributionDays = try? JSONDecoder().decode([ContributionDay].self, from: data) {
+      self.sharedArray = contributionDays
     }
+  }
+
+  func refreshSharedArray() {
+    // Existing implementation to refresh shared array
+  }
 }
+
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
   static let shared = WatchSessionManager()
@@ -58,17 +56,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     }
   }
 
-  override init() {
-    super.init()
-    if WCSession.isSupported() {
-      let session = WCSession.default
-      session.delegate = self
-      session.activate()
-    }
-  }
-
-  func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any])
-  {
+  func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
     if let contributionDaysData = applicationContext["contributionDays"] as? Data {
       saveContributionDays(data: contributionDaysData)
     }
@@ -80,13 +68,12 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
   }
 
   // WCSessionDelegate methods
-  func session(
-    _ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState,
-    error: Error?
-  ) {}
-
+  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    // Handle session activation completion
+  }
 }
 
-#Preview {
-    ContentView()
+
+#Preview{
+  ContentView()
 }

@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct SimpleContributionGraphView<Content>: View where Content: View {
+
   let originalContent: [Content]
   let defaultView: Content
   private let calendar = Calendar.current
-  private let currentDate = Date()  // You can replace this with the date of the month you want to display
-
+  private let currentDate = Date()
   private let padding: CGFloat = 2
   private var numberOfRows: Int {
     let daysInMonth = self.daysInMonth
@@ -13,7 +13,7 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
     let totalDays = daysInMonth + startingDayOfMonth
     return (totalDays + 6) / 7  // Calculate the number of rows dynamically
   }
-  private var numberOfColumns: Int { return 7 }  // Always 7 columns for days of the week
+  private var numberOfColumns: Int { return 7 } 
   private let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
   private var daysInMonth: Int {
@@ -42,11 +42,11 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
 
       VStack(alignment: .leading, spacing: padding) {
         HStack(alignment: .center) {
-//          Text("5pm FRXMAS").font(.system(size: 10))
-//                    ForEach(daysOfWeek, id: \.self) { day in
-//                      Text(day)
-//                        .font(.caption)
-//                        .frame(width: blockWidth, height: blockHeight)
+          //          Text("5pm FRXMAS").font(.system(size: 10))
+          //                    ForEach(daysOfWeek, id: \.self) { day in
+          //                      Text(day)
+          //                        .font(.caption)
+          //                        .frame(width: blockWidth, height: blockHeight)
         }
 
         ForEach(0..<numberOfRows, id: \.self) { rowIndex in
