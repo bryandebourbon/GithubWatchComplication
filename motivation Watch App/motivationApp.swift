@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 import WatchConnectivity
 
 @main
@@ -49,6 +50,9 @@ struct ContentView: View {
   }
 
   func refreshSharedArray() {
+    SharedUserDefaults.shared.updateData {
+      WidgetCenter.shared.reloadAllTimelines()
+    }
     // Existing implementation to refresh shared array
   }
 }

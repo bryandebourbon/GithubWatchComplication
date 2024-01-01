@@ -16,7 +16,7 @@ class SharedUserDefaults {
 
   func addContributionDays(completion: @escaping () -> Void) {
     SharedUserDefaults.fetcher.fetchGitHubData(
-      accessToken: "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"
+      accessToken: ""
     ) { result in
       switch result {
         case .success(let response):
@@ -58,5 +58,13 @@ class SharedUserDefaults {
       return []
     }
     return eventDays
+  }
+  func updateData(completion: @escaping () -> Void) {
+    // Assuming addContributionDays fetches and updates contribution days
+    addContributionDays {
+      // After updating contribution days, update event days
+      self.saveEventDays(eventDays: self.getEventDays())
+      completion()  // Call completion callback after all updates
+    }
   }
 }

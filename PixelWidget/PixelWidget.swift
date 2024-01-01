@@ -18,11 +18,14 @@ struct Provider: AppIntentTimelineProvider {
   }
 
   func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
+    SharedUserDefaults.shared.updateData{ return }
+
+    // Fetch contribution and event days
+    let sharedContributionDays = SharedUserDefaults.shared.getContributionDays()
+    let sharedEventDays = SharedUserDefaults.shared.getEventDays()
+
     var entries: [SimpleEntry] = []
 
-    // Fetch contribution and event days from SharedUserDefaults
-    let sharedContributionDays = SharedUserDefaults.shared.getContributionDays()
-    let sharedEventDays = SharedUserDefaults.shared.getEventDays()  // New Line
 
     let entry = SimpleEntry(
       date: Date(),
