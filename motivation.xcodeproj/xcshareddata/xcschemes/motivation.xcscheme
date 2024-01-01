@@ -49,6 +49,13 @@
             ReferencedContainer = "container:motivation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "GITHUB_TOKEN"
+            value = "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"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

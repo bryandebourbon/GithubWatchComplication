@@ -9,10 +9,14 @@ class SharedUserDefaults {
   init() {
     userDefaults = UserDefaults(suiteName: "group.com.bryandebourbon.shared")
   }
+  func getEnvironmentVariable(named name: String) -> String? {
+    return ProcessInfo.processInfo.environment[name]
+  }
+
 
   func addContributionDays(completion: @escaping () -> Void) {
     SharedUserDefaults.fetcher.fetchGitHubData(
-      accessToken: "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"
+      accessToken: getEnvironmentVariable(named: "GITHUB_TOKEN") ?? ""
     ) { result in
       switch result {
       case .success(let response):

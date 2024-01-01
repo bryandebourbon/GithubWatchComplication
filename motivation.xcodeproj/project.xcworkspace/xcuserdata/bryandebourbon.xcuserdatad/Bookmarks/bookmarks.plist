@@ -10,15 +10,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>60</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>14</string>
+					<string>19</string>
 					<key>StartingColumnNumber</key>
-					<string>20</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>14</string>
+					<string>18</string>
 					<key>Timestamp</key>
-					<string>725641234.2084</string>
+					<string>725813960.621049</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,15 +34,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>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</string>
+				<string>      accessToken: getEnvironmentVariable(named: "GITHUB_TOKEN") ?? ""
+</string>
 				<key>leading</key>
 				<string>  func addContributionDays(completion: @escaping () -&gt; Void) {
     SharedUserDefaults.fetcher.fetchGitHubData(
-      accessToken: "</string>
+</string>
 				<key>trailing</key>
-				<string>"
-    ) { result in
+				<string>    ) { result in
       switch result {
+      case .success(let response):
 </string>
 			</dict>
 			<key>type</key>
