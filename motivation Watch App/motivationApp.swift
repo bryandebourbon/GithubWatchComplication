@@ -15,11 +15,13 @@ struct motivation_Watch_AppApp: App {
 
 struct ContentView: View {
   @State private var sharedArray: [ContributionDay] = []
+  @State private var eventDays: [EventCountDay] = [] // Add this line
+
   let didUpdateSharedArray = NotificationCenter.default.publisher(for: NSNotification.Name("UpdatedSharedArray"))
 
   var body: some View {
     VStack {
-      GitHubMonthView(contributions: $sharedArray)
+      GitHubMonthView(contributions: $sharedArray, eventDays: $eventDays)
       Button("Refresh") {
         refreshSharedArray()
       }
@@ -33,9 +35,16 @@ struct ContentView: View {
   }
 
   func updateSharedArray() {
+
     if let data = SharedUserDefaults.shared.userDefaults?.data(forKey: "sharedArray"),
        let contributionDays = try? JSONDecoder().decode([ContributionDay].self, from: data) {
       self.sharedArray = contributionDays
+    }
+
+    if let eventData = SharedUserDefaults.shared.userDefaults?.data(forKey: "eventDays"),
+       let eventDays = try? JSONDecoder().decode([EventCountDay].self, from: eventData) {
+      self.eventDays = eventDays
+      print("Updated event days: \(eventDays)")
     }
   }
 
@@ -60,6 +69,15 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     if let contributionDaysData = applicationContext["contributionDays"] as? Data {
       saveContributionDays(data: contributionDaysData)
     }
+
+    if let eventDaysData = applicationContext["eventDays"] as? Data {
+      saveEventDays(data: eventDaysData)
+    }
+  }
+
+  private func saveEventDays(data: Data) {
+    SharedUserDefaults.shared.userDefaults?.set(data, forKey: "eventDays")
+    NotificationCenter.default.post(name: NSNotification.Name("UpdatedSharedArray"), object: nil)
   }
 
   private func saveContributionDays(data: Data) {

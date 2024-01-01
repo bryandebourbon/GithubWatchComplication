@@ -46,7 +46,7 @@ class GitHubDataFetcher {
       request.httpBody = httpBody
     } else {
       // Handle error here
-      print("ERROR")
+//      print("ERROR")
     }
 
     let task = session.dataTask(with: request) { data, response, error in
@@ -61,10 +61,6 @@ class GitHubDataFetcher {
         return
       }
 
-      // Print the raw JSON response
-      if let rawJSONString = String(data: data, encoding: .utf8) {
-        print("Raw JSON string: \(rawJSONString)")
-      }
 
       do {
         let decodedResponse = try JSONDecoder().decode(GitHubQueryResponse.self, from: data)

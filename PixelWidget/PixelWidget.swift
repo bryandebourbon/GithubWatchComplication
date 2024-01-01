@@ -13,19 +13,23 @@ struct Provider: AppIntentTimelineProvider {
     SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
   }
 
-  func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry
-  {
+  func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
     SimpleEntry(date: Date(), configuration: configuration)
   }
 
-  func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<
-    SimpleEntry
-  > {
+  func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
     var entries: [SimpleEntry] = []
 
+    // Fetch contribution and event days from SharedUserDefaults
+    let sharedContributionDays = SharedUserDefaults.shared.getContributionDays()
+    let sharedEventDays = SharedUserDefaults.shared.getEventDays()  // New Line
+
     let entry = SimpleEntry(
-      date: Date(), configuration: configuration,
-      sharedArray: SharedUserDefaults.shared.getSharedArray())
+      date: Date(),
+      configuration: configuration,
+      sharedArray: sharedContributionDays,
+      eventDays: sharedEventDays  // New Line
+    )
     entries.append(entry)
 
     let refreshDate = Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
@@ -42,14 +46,16 @@ struct SimpleEntry: TimelineEntry {
   let date: Date
   let configuration: ConfigurationAppIntent
   let sharedArray: [ContributionDay]
-//  var contributions = []
+  let eventDays: [EventCountDay]  // Add this line
 
-  init(date: Date, configuration: ConfigurationAppIntent, sharedArray: [ContributionDay] = []) {
+  init(date: Date, configuration: ConfigurationAppIntent, sharedArray: [ContributionDay] = [], eventDays: [EventCountDay] = []) {
     self.date = date
     self.configuration = configuration
     self.sharedArray = sharedArray
+    self.eventDays = eventDays  // Add this line
   }
 }
+
 
 struct PixelWidgetEntryView: View {
   let entry: SimpleEntry
@@ -57,7 +63,7 @@ struct PixelWidgetEntryView: View {
 
   var body: some View {
     VStack {
-        GitHubMonthView(contributions: .constant(entry.sharedArray))
+      GitHubMonthView(contributions: .constant(entry.sharedArray),  eventDays: .constant(entry.eventDays))
     }.containerBackground(for:.widget){
         Color.black
     }.frame(width: 194, height: 76)
@@ -89,19 +95,22 @@ extension ConfigurationAppIntent {
   }
 }
 
-var model = ContributionsModel()  // Make 'model' static
-var sampleData: [ContributionDay] = model.generateMockDataMonth()
+
 
 struct PixelWidget_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        PixelWidgetEntryView(
-            entry: SimpleEntry(
-                date: Date(),
-                configuration: .smiley,
-                sharedArray: sampleData
-            )
-        )
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-    }
+  static var sampleData: [ContributionDay] = ContributionsModel().generateMockDataMonth()
+  static var sampleEventDays: [EventCountDay] = SharedUserDefaults.shared.getEventDays()  // New Line
+
+  static var previews: some View {
+    PixelWidgetEntryView(
+      entry: SimpleEntry(
+        date: Date(),
+        configuration: .smiley,
+        sharedArray: sampleData,
+        eventDays: sampleEventDays  // New Line
+      )
+    )
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+  }
 }
+

@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>19</string>
+					<string>62</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>18</string>
+					<string>62</string>
 					<key>Timestamp</key>
-					<string>725813960.621049</string>
+					<string>725824961.485492</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,20 +34,30 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>      accessToken: getEnvironmentVariable(named: "GITHUB_TOKEN") ?? ""
-</string>
+				<string></string>
 				<key>leading</key>
-				<string>  func addContributionDays(completion: @escaping () -&gt; Void) {
-    SharedUserDefaults.fetcher.fetchGitHubData(
+				<string>  }
+}
 </string>
 				<key>trailing</key>
-				<string>    ) { result in
-      switch result {
-      case .success(let response):
-</string>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>query-specification</key>
+			<dict>
+				<key>query</key>
+				<string>text</string>
+				<key>term</key>
+				<dict>
+					<key>text</key>
+					<string>print</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>batch-find-query</string>
 		</dict>
 	</array>
 </dict>

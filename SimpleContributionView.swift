@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct SimpleContributionGraphView<Content>: View where Content: View {
-
   let originalContent: [Content]
   let defaultView: Content
   private let calendar = Calendar.current
@@ -11,10 +10,9 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
     let daysInMonth = self.daysInMonth
     let startingDayOfMonth = self.startingDayOfMonth
     let totalDays = daysInMonth + startingDayOfMonth
-    return (totalDays + 6) / 7  // Calculate the number of rows dynamically
+    return (totalDays + 6) / 7
   }
-  private var numberOfColumns: Int { return 7 } 
-  private let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  private var numberOfColumns: Int { return 7 }
 
   private var daysInMonth: Int {
     let range = calendar.range(of: .day, in: .month, for: currentDate)!
@@ -24,31 +22,17 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
   private var startingDayOfMonth: Int {
     let components = calendar.dateComponents([.year, .month], from: currentDate)
     let firstDayOfMonth = calendar.date(from: components)!
-    return calendar.component(.weekday, from: firstDayOfMonth) - 1  // Adjust for 0-based index
-  }
-
-  private var totalBlocks: Int {
-    return numberOfRows * numberOfColumns
+    return calendar.component(.weekday, from: firstDayOfMonth) - 1
   }
 
   var body: some View {
     GeometryReader { geometry in
       let totalWidth = geometry.size.width
       let totalHeight = geometry.size.height
-      let blockWidth =
-        (totalWidth - padding * (CGFloat(numberOfColumns) + 1)) / CGFloat(numberOfColumns)
-      let blockHeight =
-        (totalHeight - padding * (CGFloat(numberOfRows) + 1)) / CGFloat(numberOfRows)
+      let blockWidth = (totalWidth - padding * (CGFloat(numberOfColumns) + 1)) / CGFloat(numberOfColumns)
+      let blockHeight = (totalHeight - padding * (CGFloat(numberOfRows) + 1)) / CGFloat(numberOfRows)
 
       VStack(alignment: .leading, spacing: padding) {
-        HStack(alignment: .center) {
-          //          Text("5pm FRXMAS").font(.system(size: 10))
-          //                    ForEach(daysOfWeek, id: \.self) { day in
-          //                      Text(day)
-          //                        .font(.caption)
-          //                        .frame(width: blockWidth, height: blockHeight)
-        }
-
         ForEach(0..<numberOfRows, id: \.self) { rowIndex in
           HStack(spacing: padding) {
             ForEach(0..<numberOfColumns, id: \.self) { columnIndex in
@@ -59,7 +43,7 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
                   .frame(width: blockWidth, height: blockHeight)
                   .cornerRadius(2)
               } else {
-                Color.black
+                Color.clear // Using clear color for non-month days
                   .frame(width: blockWidth, height: blockHeight)
                   .cornerRadius(2)
               }
@@ -71,6 +55,7 @@ struct SimpleContributionGraphView<Content>: View where Content: View {
     }
   }
 }
+
 
 struct SimpleContributionGraphView_Previews: PreviewProvider {
   static var previews: some View {

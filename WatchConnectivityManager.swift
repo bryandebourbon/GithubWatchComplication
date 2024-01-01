@@ -12,6 +12,15 @@ class WatchConnectivityManager: NSObject, WCSessionDelegate {
     }
   }
 
+  func sendEventDays(eventDays: [EventCountDay]) {
+    do {
+      let data = try JSONEncoder().encode(eventDays)
+      try WCSession.default.updateApplicationContext(["eventDays": data])
+    } catch {
+      print("Error sending event days: \(error)")
+    }
+  }
+  
   func sendContributionDays(contributionDays: [ContributionDay]) {
     let session = WCSession.default
 
