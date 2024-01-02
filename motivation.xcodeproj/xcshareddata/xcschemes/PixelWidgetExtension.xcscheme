@@ -73,12 +73,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2E64C7B72B0BCB9800D1D503"
+            BuildableName = "PixelWidgetExtension.appex"
+            BlueprintName = "PixelWidgetExtension"
+            ReferencedContainer = "container:motivation.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E64C78A2B0BC79E00D1D503"
             BuildableName = "motivation.app"
             BlueprintName = "motivation"
             ReferencedContainer = "container:motivation.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
