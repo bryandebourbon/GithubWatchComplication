@@ -47,7 +47,7 @@ struct GitHubMonthView: View {
     ZStack {
       Rectangle().fill(Color.red.opacity(0.5))
       if isToday {
-        Circle().fill(.white).frame(width: 10, height: 10)
+        Ellipse().fill(.white).frame(width: 14, height: 12)
         Text("\(dayOfMonth)")
           .font(.system(size: 9)).bold()
           .foregroundColor(.black)
@@ -66,9 +66,9 @@ struct GitHubMonthView: View {
     return ZStack {
       Rectangle().fill(color)
       if isToday {
-        Circle()
+        Ellipse()
           .fill(.white)
-          .frame(width: 10, height: 10)
+          .frame(width: 14, height: 12)
         Text("\(index)").bold()
           .font(.system(size: 9))
           .foregroundColor(.black)
@@ -90,13 +90,11 @@ struct GitHubMonthView: View {
     case 0:
       return Color.gray.opacity(0.3)
     case 1:
-      return Color.green.opacity(0.4)
-    case 2:
-      return Color.green.opacity(0.5)
-    case 3:
       return Color.green.opacity(0.6)
-    default:
+    case 2:
       return Color.green.opacity(0.7)
+    default:
+      return Color.green.opacity(0.8)
     }
   }
 
@@ -105,7 +103,7 @@ struct GitHubMonthView: View {
     return ZStack {
       Rectangle().fill(Color.gray.opacity(0.3))
       if isToday {
-        Circle().fill(.white).frame(width: 10, height: 10)
+        Ellipse().fill(.white).frame(width: 14, height: 12)
         Text("\(dayOfMonth)").bold()
           .font(.system(size: 9))
           .foregroundColor(.black)
