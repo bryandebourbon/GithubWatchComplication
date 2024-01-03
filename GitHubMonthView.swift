@@ -97,12 +97,12 @@ struct GitHubMonthView: View {
     switch count {
     case 0:
       return Color.gray.opacity(0.3)
-    case 1:
+    case 1...2:
       return Color.green.opacity(0.6)
-    case 2:
-      return Color.green.opacity(0.7)
-    default:
+    case 3...4:
       return Color.green.opacity(0.8)
+    default:
+      return Color.green
     }
   }
 
