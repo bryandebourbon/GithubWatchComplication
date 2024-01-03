@@ -4,7 +4,8 @@ import SwiftUI
 struct GitHubMonthView: View {
   @Binding var contributions: [ContributionDay]
   @Binding var eventDays: [EventCountDay]
-  let todayEllipse: some View = Ellipse().fill(.black).frame(width: 20, height: 8).opacity(0.5)
+  let todayEllipse: some View = Ellipse().fill(.black).frame(width: 20, height: 7).opacity(0.5)
+  let todayEllipseRed: some View = Ellipse().fill(.black).frame(width: 20, height: 7)
 
   var body: some View {
     VStack {
@@ -39,7 +40,9 @@ struct GitHubMonthView: View {
 
       } else if let eventDay = eventDays.first(where: { $0.date == dateString }) {
         let hasContributions = contributions.contains { $0.date == dateString }
-        return AnyView(self.eventDayView(dayOfMonth: dayOfMonth, isToday: isToday, hasContributions: hasContributions))
+        return AnyView(
+          self.eventDayView(
+            dayOfMonth: dayOfMonth, isToday: isToday, hasContributions: hasContributions))
       } else {
         return AnyView(self.defaultDayView(dayOfMonth: dayOfMonth, isToday: isToday))
       }
@@ -47,12 +50,12 @@ struct GitHubMonthView: View {
     }
   }
 
-
   private func eventDayView(dayOfMonth: Int, isToday: Bool, hasContributions: Bool) -> some View {
     ZStack {
       Rectangle().fill(Color.red.opacity(0.5))
       if isToday {
-        Ellipse().fill(hasContributions ? Color.black : Color.red).frame(width: 10, height: 8).opacity(0.5)
+        Ellipse().fill(hasContributions ? Color.black : Color.red).frame(width: 10, height: 8)
+          .opacity(0.5)
       }
       Text("\(dayOfMonth)")
         .font(.system(size: 9)).bold()
@@ -60,20 +63,30 @@ struct GitHubMonthView: View {
     }
   }
 
-  private func contributionView(for contributionDay: ContributionDay, index: Int, isToday: Bool) -> some View {
+  private func contributionView(for contributionDay: ContributionDay, index: Int, isToday: Bool)
+    -> some View
+  {
     let color = colorForContributionCount(contributionDay.contributionCount)
 
     return ZStack {
       Rectangle().fill(color)
       if isToday {
-        todayEllipse
+
+        if contributionDay.contributionCount == 0 {
+          Rectangle().fill(.gray).opacity(0.6)
+          todayEllipseRed
+
+        } else {
+          todayEllipse
+
+        }
       }
       Text("\(index)").bold()
-        .font(.system(size: 9))
+        .font(.system(size: (isToday ? 10 : 9)))
         .foregroundColor(.white)
     }
-  }
 
+  }
 
   private var dateFormatter: DateFormatter {
     let formatter = DateFormatter()
@@ -96,14 +109,14 @@ struct GitHubMonthView: View {
   private func defaultDayView(dayOfMonth: Int, isToday: Bool) -> some View {
     print(dayOfMonth, isToday)
     return ZStack {
-      Rectangle().fill(Color.gray.opacity(0.3))
+      Rectangle().fill(Color.gray.opacity(0.5))
       if isToday {
-        todayEllipse
+        todayEllipseRed
       }
 
-        Text("\(dayOfMonth)").bold()
-          .font(.system(size: 9))
-          .foregroundColor(.white)
+      Text("\(dayOfMonth)").bold()
+        .font(.system(size: 9))
+        .foregroundColor(.white)
 
     }
   }
