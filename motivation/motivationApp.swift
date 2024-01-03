@@ -44,17 +44,7 @@ struct ContentView: View {
   }
 
 
-  func isCurrentMonth(_ dateString: String) -> Bool {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    if let date = dateFormatter.date(from: dateString) {
-      let calendar = Calendar.current
-      let currentMonth = calendar.component(.month, from: Date())
-      let month = calendar.component(.month, from: date)
-      return month == currentMonth
-    }
-    return false
-  }
+
 
   var body: some View {
     // Your existing VStack and other UI components

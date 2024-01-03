@@ -5,6 +5,17 @@ struct EventCountDay: Codable, Equatable {
   let date: String
   let eventCount: Int
 }
+func isCurrentMonth(_ dateString: String) -> Bool {
+  let dateFormatter = DateFormatter()
+  dateFormatter.dateFormat = "yyyy-MM-dd"
+  if let date = dateFormatter.date(from: dateString) {
+    let calendar = Calendar.current
+    let currentMonth = calendar.component(.month, from: Date())
+    let month = calendar.component(.month, from: date)
+    return month == currentMonth
+  }
+  return false
+}
 
 class EventKitFetcher {
   static let shared = EventKitFetcher()

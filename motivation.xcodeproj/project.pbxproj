@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E37221C2B4614D9003C4B66 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37221B2B4614D9003C4B66 /* secrets.swift */; };
-		2E37221D2B4614D9003C4B66 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37221B2B4614D9003C4B66 /* secrets.swift */; };
-		2E37221E2B4614D9003C4B66 /* secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37221B2B4614D9003C4B66 /* secrets.swift */; };
 		2E58FE072B103970000A521A /* HealthKitFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE062B103970000A521A /* HealthKitFetcher.swift */; };
 		2E58FE0B2B1042D2000A521A /* CaloriesGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */; };
 		2E58FE0D2B1048B3000A521A /* SimpleContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */; };
@@ -106,7 +103,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E37221B2B4614D9003C4B66 /* secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secrets.swift; sourceTree = "<group>"; };
 		2E58FE062B103970000A521A /* HealthKitFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFetcher.swift; sourceTree = "<group>"; };
 		2E58FE0A2B1042D2000A521A /* CaloriesGraphView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CaloriesGraphView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleContributionView.swift; sourceTree = "<group>"; };
@@ -175,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				2E66F58D2B4617BF007AFEE7 /* tokens.swift */,
-				2E37221B2B4614D9003C4B66 /* secrets.swift */,
 				2EE7729E2B3FD5D700D3F72D /* WatchConnectivityManager.swift */,
 				2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */,
 				2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */,
@@ -419,7 +414,6 @@
 			files = (
 				2EE772972B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */,
 				2E58FE072B103970000A521A /* HealthKitFetcher.swift in Sources */,
-				2E37221C2B4614D9003C4B66 /* secrets.swift in Sources */,
 				2E64C7D32B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */,
 				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
@@ -440,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECE661A2B4333400099766B /* EventKitFetcher.swift in Sources */,
-				2E37221D2B4614D9003C4B66 /* secrets.swift in Sources */,
 				2EE772982B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */,
 				2E64C7CF2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2E58FE102B10602A000A521A /* HealthKitFetcher.swift in Sources */,
@@ -462,7 +455,6 @@
 			files = (
 				2E58FE112B10602A000A521A /* HealthKitFetcher.swift in Sources */,
 				2E64C7C02B0BCB9800D1D503 /* PixelWidget.swift in Sources */,
-				2E37221E2B4614D9003C4B66 /* secrets.swift in Sources */,
 				2E64C7C22B0BCB9800D1D503 /* AppIntent.swift in Sources */,
 				2E64C7D92B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
 				2E64C7D02B0BCE5200D1D503 /* SharedUserDefaults.swift in Sources */,

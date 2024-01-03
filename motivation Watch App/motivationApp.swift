@@ -1,6 +1,6 @@
 import SwiftUI
-import WidgetKit
 import WatchConnectivity
+import WidgetKit
 
 @main
 struct motivation_Watch_AppApp: App {
@@ -16,18 +16,36 @@ struct motivation_Watch_AppApp: App {
 
 struct ContentView: View {
   @State private var sharedArray: [ContributionDay] = []
-  @State private var eventDays: [EventCountDay] = [] // Add this line
+  @State private var eventDays: [EventCountDay] = []  // Add this line
 
-  let didUpdateSharedArray = NotificationCenter.default.publisher(for: NSNotification.Name("UpdatedSharedArray"))
+  let didUpdateSharedArray = NotificationCenter.default.publisher(
+    for: NSNotification.Name("UpdatedSharedArray"))
 
   var body: some View {
     VStack {
       GitHubMonthView(contributions: $sharedArray, eventDays: $eventDays)
-      Button("Refresh") {
-        refreshSharedArray()
+      HStack {
+        Button("Git") {
+          updateSharedArray()
+          refreshSharedArray()
+
+        }
+        Button("Cal") {
+          EventKitFetcher.shared.requestCalendarAccess { granted in
+            if granted {
+              self.loadEventData()
+            } else {
+              print("Calendar access denied")
+            }
+          }
+          SharedUserDefaults.shared.updateData {
+            WidgetCenter.shared.reloadAllTimelines()
+          }
+        }
       }
     }
     .onAppear {
+      updateSharedArray()
       refreshSharedArray()
     }
     .onReceive(didUpdateSharedArray) { _ in
@@ -35,28 +53,44 @@ struct ContentView: View {
     }
   }
 
+  func loadEventData() {
+    print("load executed")
+    EventKitFetcher.shared.fetchEvents { events in
+      DispatchQueue.main.async {
+        print(events)
+        self.eventDays = events
+      }
+    }
+  }
   func updateSharedArray() {
 
     if let data = SharedUserDefaults.shared.userDefaults?.data(forKey: "sharedArray"),
-       let contributionDays = try? JSONDecoder().decode([ContributionDay].self, from: data) {
+      let contributionDays = try? JSONDecoder().decode([ContributionDay].self, from: data)
+    {
       self.sharedArray = contributionDays
     }
 
     if let eventData = SharedUserDefaults.shared.userDefaults?.data(forKey: "eventDays"),
-       let eventDays = try? JSONDecoder().decode([EventCountDay].self, from: eventData) {
+      let eventDays = try? JSONDecoder().decode([EventCountDay].self, from: eventData)
+    {
       self.eventDays = eventDays
       print("Updated event days: \(eventDays)")
     }
   }
 
   func refreshSharedArray() {
+    SharedUserDefaults.shared.addContributionDays {
+      DispatchQueue.main.async {
+        let array = SharedUserDefaults.shared.getContributionDays()  // Updated this line
+        self.sharedArray = array.filter { isCurrentMonth($0.date) }
+      }
+    }
+
     SharedUserDefaults.shared.updateData {
       WidgetCenter.shared.reloadAllTimelines()
     }
-    // Existing implementation to refresh shared array
   }
 }
-
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
   static let shared = WatchSessionManager()
@@ -69,7 +103,8 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     }
   }
 
-  func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+  func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any])
+  {
     if let contributionDaysData = applicationContext["contributionDays"] as? Data {
       saveContributionDays(data: contributionDaysData)
     }
@@ -90,11 +125,13 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
   }
 
   // WCSessionDelegate methods
-  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+  func session(
+    _ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState,
+    error: Error?
+  ) {
     // Handle session activation completion
   }
 }
-
 
 #Preview{
   ContentView()
