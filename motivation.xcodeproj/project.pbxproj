@@ -48,9 +48,9 @@
 		2E64C7DC2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
 		2E64C7DD2B0BEBF900D1D503 /* ContributionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E64C7DA2B0BEBF900D1D503 /* ContributionFetcher.swift */; };
 		2E64C8072B0C409500D1D503 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E64C8052B0C409100D1D503 /* WatchConnectivity.framework */; };
-		2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
-		2E7CAA9C2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
-		2E7CAA9D2B115EAB006CDABC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */; };
+		2E66F58E2B4617BF007AFEE7 /* tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66F58D2B4617BF007AFEE7 /* tokens.swift */; };
+		2E66F58F2B4617BF007AFEE7 /* tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66F58D2B4617BF007AFEE7 /* tokens.swift */; };
+		2E66F5902B4617BF007AFEE7 /* tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66F58D2B4617BF007AFEE7 /* tokens.swift */; };
 		2ECE66152B430FC80099766B /* EventKitFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE66142B430FC80099766B /* EventKitFetcher.swift */; };
 		2ECE66192B4333400099766B /* EventKitFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE66142B430FC80099766B /* EventKitFetcher.swift */; };
 		2ECE661A2B4333400099766B /* EventKitFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE66142B430FC80099766B /* EventKitFetcher.swift */; };
@@ -136,7 +136,7 @@
 		2E64C7E82B0C2F8A00D1D503 /* Motivation_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivation_Watch_AppTests.swift; sourceTree = "<group>"; };
 		2E64C7FA2B0C31F000D1D503 /* motivationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = motivationTests.swift; sourceTree = "<group>"; };
 		2E64C8052B0C409100D1D503 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
-		2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		2E66F58D2B4617BF007AFEE7 /* tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tokens.swift; sourceTree = "<group>"; };
 		2ECE66142B430FC80099766B /* EventKitFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitFetcher.swift; sourceTree = "<group>"; };
 		2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarContributionGraphView.swift; sourceTree = "<group>"; };
 		2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubMonthView.swift; sourceTree = "<group>"; };
@@ -174,10 +174,10 @@
 		2E64C7822B0BC79D00D1D503 = {
 			isa = PBXGroup;
 			children = (
+				2E66F58D2B4617BF007AFEE7 /* tokens.swift */,
 				2E37221B2B4614D9003C4B66 /* secrets.swift */,
 				2EE7729E2B3FD5D700D3F72D /* WatchConnectivityManager.swift */,
 				2EE772962B3FB9ED00D3F72D /* CalendarContributionGraphView.swift */,
-				2E7CAA9A2B115EAB006CDABC /* HelperFunctions.swift */,
 				2EE7729A2B3FBC6500D3F72D /* GitHubMonthView.swift */,
 				2E58FE0C2B1048B3000A521A /* SimpleContributionView.swift */,
 				2E58FE142B106F9E000A521A /* CalendarMonthView.swift */,
@@ -424,9 +424,9 @@
 				2E64C78F2B0BC79E00D1D503 /* motivationApp.swift in Sources */,
 				2E64C7CE2B0BCDB700D1D503 /* SharedUserDefaults.swift in Sources */,
 				2ECE66152B430FC80099766B /* EventKitFetcher.swift in Sources */,
-				2E7CAA9B2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
 				2EE7729F2B3FD5D700D3F72D /* WatchConnectivityManager.swift in Sources */,
 				2E58FE0D2B1048B3000A521A /* SimpleContributionView.swift in Sources */,
+				2E66F58E2B4617BF007AFEE7 /* tokens.swift in Sources */,
 				2E64C7D72B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
 				2EE7729B2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */,
 				2E58FE152B106F9E000A521A /* CalendarMonthView.swift in Sources */,
@@ -446,7 +446,7 @@
 				2E58FE102B10602A000A521A /* HealthKitFetcher.swift in Sources */,
 				2E58FE0E2B10601F000A521A /* CaloriesGraphView.swift in Sources */,
 				2E64C7D82B0BEBC000D1D503 /* ContributionModel.swift in Sources */,
-				2E7CAA9C2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
+				2E66F58F2B4617BF007AFEE7 /* tokens.swift in Sources */,
 				2E58FE122B10602E000A521A /* SimpleContributionView.swift in Sources */,
 				2E64C7A12B0BC7A000D1D503 /* motivationApp.swift in Sources */,
 				2EE7729C2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */,
@@ -469,7 +469,7 @@
 				2ECE66192B4333400099766B /* EventKitFetcher.swift in Sources */,
 				2EE772992B3FB9EE00D3F72D /* CalendarContributionGraphView.swift in Sources */,
 				2E58FE132B10602E000A521A /* SimpleContributionView.swift in Sources */,
-				2E7CAA9D2B115EAB006CDABC /* HelperFunctions.swift in Sources */,
+				2E66F5902B4617BF007AFEE7 /* tokens.swift in Sources */,
 				2EE7729D2B3FBC6500D3F72D /* GitHubMonthView.swift in Sources */,
 				2E64C7D52B0BEB5300D1D503 /* ContributionGraphView.swift in Sources */,
 				2E58FE0F2B106020000A521A /* CaloriesGraphView.swift in Sources */,
